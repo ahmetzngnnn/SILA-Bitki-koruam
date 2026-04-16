@@ -20,7 +20,7 @@
     "chart.js": "^4.4.0",
     "react-chartjs-2": "^5.2.0",
     "html5-qrcode": "^2.3.8",
-    "qrcode.react": "^1.0.1",
+    "qrcode.react": "^3.1.0",
     "zod": "^3.22.0"
   },
   "devDependencies": {
