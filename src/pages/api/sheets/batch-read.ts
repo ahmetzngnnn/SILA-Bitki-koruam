@@ -5,7 +5,7 @@
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from './auth/[...nextauth]';
+import { authOptions } from '../auth/[...nextauth]';
 import { createSheetsClient } from '@/lib/google-sheets';
 import type { ApiResponse, SheetsData } from '@/lib/types';
 
