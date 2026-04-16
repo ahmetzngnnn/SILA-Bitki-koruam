@@ -4,6 +4,7 @@
 
 import type { NextPage } from 'next';
 import type { ErrorProps } from 'next/error';
+import type { NextPageContext } from 'next';
 
 const Error: NextPage<ErrorProps> = ({ statusCode }) => {
   return (
@@ -32,8 +33,8 @@ const Error: NextPage<ErrorProps> = ({ statusCode }) => {
   );
 };
 
-Error.getInitialProps = ({ res, err }) => {
-  const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
+Error.getInitialProps = ({ res, err }: NextPageContext): ErrorProps => {
+  const statusCode = (res?.statusCode) || (err?.statusCode) || 500;
   return { statusCode };
 };
 
